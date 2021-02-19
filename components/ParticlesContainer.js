@@ -5,6 +5,7 @@ import Particles from 'react-particles-js';
 export default function ParticlesContainer() {
     return ( 
         <Particles
+            height="100vh"
             params={{
                 "particles": {
                     "number": {
