@@ -3,8 +3,9 @@ import { useState } from "react"
 import { DiMongodb } from 'react-icons/di'
 import { FaHtml5, FaCss3Alt, FaReact, FaDatabase, FaNodeJs, FaGithub, FaGitAlt, FaInfinity } from 'react-icons/fa'
 import { IoLogoJavascript } from 'react-icons/io'
+import { IoLogoVercel } from 'react-icons/io5'
 import { RiLayoutMasonryLine } from 'react-icons/ri'
-import { SiTailwindcss, SiNextDotJs, SiHeroku } from 'react-icons/si'
+import { SiTailwindcss, SiNextDotJs, SiHeroku, SiRedux } from 'react-icons/si'
 
 
 
@@ -73,6 +74,7 @@ function TechStack() {
                 <p className="text-2xl"><SiTailwindcss className="inline-block text-blue-300" /> TailwindCSS</p>
                 <p className="text-2xl"><IoLogoJavascript className="inline-block text-yellow-400" /> Javascript</p>
                 <p className="text-2xl"><FaReact className="inline-block text-blue-600" /> React.js</p>
+                <p className="text-2xl"><SiRedux className="inline-block text-purple-500" /> Redux</p>
                 <p className="text-2xl"><SiNextDotJs className="inline-block" /> Next.js</p>
             </div>
             <div className="w-full md:w-4/12 mb-8 md:mb-0 text-center">
@@ -87,6 +89,7 @@ function TechStack() {
                 <p className="text-2xl"><FaGithub className="inline-block" /> Github</p>
                 <p className="text-2xl"><FaGitAlt className="inline-block text-yellow-600" /> Git</p>
                 <p className="text-2xl"><SiHeroku className="inline-block text-purple-500" /> Heroku</p>
+                <p className="text-2xl"><IoLogoVercel className="inline-block" /> Vercel</p>
             </div>
         </div>
     )

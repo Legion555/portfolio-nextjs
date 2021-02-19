@@ -3,7 +3,7 @@ import {AiOutlineLink, AiFillGoogleCircle} from 'react-icons/ai'
 import { DiMongodb } from 'react-icons/di'
 import { FaNodeJs, FaGithub, FaDatabase, FaInfinity } from 'react-icons/fa'
 import { IoLogoVercel } from 'react-icons/io5'
-import { SiTailwindcss, SiNextDotJs } from 'react-icons/si'
+import { SiTailwindcss, SiNextDotJs, SiRedux } from 'react-icons/si'
 import { RiLayoutMasonryLine } from 'react-icons/ri'
 //images
 import Image from 'next/image'
@@ -42,6 +42,7 @@ export default function Work() {
                             <RiLayoutMasonryLine className="text-8xl m-auto text-green-600" />
                             <h1 className="text-center text-2xl font-bold">Frontend</h1>
                             <p className="text-xl"><SiNextDotJs className="inline-block" /> Next.js</p>
+                            <p className="text-xl"><SiRedux className="inline-block text-purple-500" /> Redux</p>
                             <p className="text-xl"><SiTailwindcss className="inline-block text-blue-300" /> TailwindCSS</p>
                         </div>
                         <div className="mb-6 lg:mb-0">

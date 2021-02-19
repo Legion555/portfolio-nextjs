@@ -1,4 +1,5 @@
 import {useState} from 'react'
+import emailjs from 'emailjs-com';
 //icons
 import { AiFillLinkedin } from 'react-icons/ai';
 import { FaTwitter, FaGithub } from 'react-icons/fa';
@@ -7,55 +8,19 @@ import { MdEmail } from 'react-icons/md';
 export default function Contact() {
     const [status, setStatus] = useState('Send message')
 
-    //Form values
-    const [name, setName] = useState('');
-    const [nameError, setNameError] = useState('Enter your name...');
-    const [email, setEmail] = useState('');
-    const [emailError, setEmailError] = useState('Enter your email...');
-    const [message, setMessage] = useState('');
-    const [messageError, setMessageErro] = useState('Enter message...');
 
-    //api url
-    let apiUrl;
-    if (process.env.NODE_ENV === 'development') {
-        apiUrl = 'http://localhost:3333'
-        } else {
-        apiUrl = process.env.serverAPI
-        }
+        function sendEmail(e) {
+            e.preventDefault();
 
-    const handleSubmit = async (e) => {
-        e.preventDefault();
-        if (!validateEmail()) {
-            return null
-        }
-        setStatus('Sending...')
-        let payload = {
-            name: name,
-            email: email,
-            message: message
-        }
-        axios.post(`${apiUrl}/api/emails/contact`, payload, {
-            headers: {
-                'Content-Type': 'application/json;charset=utf-8'
-            }
-        })
-        .then(res => {
-            setStatus('Success');
-            console.log(res);
-        })
-        .catch(err => {
-            console.log(err);
-        })
-    }
+            setStatus('Sending...')
 
-    const validateEmail = () => {
-        if (/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(email)) {
-            return true
-        }
-        setEmailError('Email is invalid')
-        setEmail('')
-        return false
-    }
+            emailjs.sendForm('service_akf9odd', 'template_4fyahrm', e.target, 'user_OtuZx1LoSqVcMymMnCqR8')
+            .then((result) => {
+                setStatus('Successful')
+            }, (error) => {
+                console.log(error.text);
+            });
+          }
 
     return (
         <div className="contact w-full min-h-screen lg:flex lg:justify-center lg:items-center pt-16" id="contact">
@@ -78,20 +43,16 @@ export default function Contact() {
                         <AiFillLinkedin className="mr-4 p-2 text-6xl rounded-3xl hover:bg-gray-200 hover:text-blue-800" /></a>
                 </div>
             </div>
-            <form className="w-full lg:w-6/12 lg:ml-12 xl:w-4/12 p-10 lg:rounded-xl shadow bg-gray-50" onSubmit={handleSubmit}>
+            <form className="w-full lg:w-6/12 lg:ml-12 xl:w-4/12 p-10 lg:rounded-xl shadow bg-gray-50" onSubmit={sendEmail}>
                 <label className="font-bold">Your name</label>
                 <input className="contact_input w-full mb-8 px-2 py-4 outline-none rounded-xl"
-                    type="text" placeholder={nameError} required
-                    value={name} onChange={(e) => setName(e.target.value)} />
+                    type="text" name="from_name" />
                 <label className="font-bold">Your email</label>
                 <input className="contact_input w-full mb-8 px-2 py-4 outline-none rounded-xl"
-                    type="text" placeholder={emailError} required
-                    value={email} onChange={(e) => setEmail(e.target.value)} />
+                    type="email" name="from_email" />
                 <label className="font-bold">Message</label>
-                <textarea className="contact_input w-full mb-8 px-2 py-2 outline-none rounded-xl bg-gray-100"
-                    type="text" placeholder={messageError} required rows='5'
-                    value={message} onChange={(e) => setMessage(e.target.value)} />
-                <button className="p-4 rounded bg-blue-800 text-white hover:bg-blue-600" type="submit">{status}</button>
+                <textarea className="contact_input w-full mb-8 px-2 py-2 outline-none rounded-xl bg-gray-100" name="message" />
+                <input className="p-4 rounded bg-blue-800 text-white hover:bg-blue-600" type="submit" value={status} />
             </form>
         </div>
     )
