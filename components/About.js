@@ -5,7 +5,7 @@ import { FaHtml5, FaCss3Alt, FaReact, FaDatabase, FaNodeJs, FaGithub, FaGitAlt, 
 import { IoLogoJavascript } from 'react-icons/io'
 import { IoLogoVercel } from 'react-icons/io5'
 import { RiLayoutMasonryLine } from 'react-icons/ri'
-import { SiTailwindcss, SiNextDotJs, SiHeroku, SiRedux } from 'react-icons/si'
+import { SiTailwindcss, SiNextDotJs, SiHeroku, SiRedux, SiTensorflow } from 'react-icons/si'
 
 
 
@@ -76,6 +76,7 @@ function TechStack() {
                 <p className="text-2xl"><FaReact className="inline-block text-blue-600" /> React.js</p>
                 <p className="text-2xl"><SiRedux className="inline-block text-purple-500" /> Redux</p>
                 <p className="text-2xl"><SiNextDotJs className="inline-block" /> Next.js</p>
+                <p className="text-xl"><SiTensorflow className="inline-block text-yellow-400" /> TensorFlow.js</p>
             </div>
             <div className="w-full md:w-4/12 mb-8 md:mb-0 text-center">
                 <FaDatabase className="text-8xl m-auto text-blue-600" />
