@@ -13,7 +13,10 @@ export default function Home() {
       <Head>
         <title>Joshua Lausberg</title>
         <link rel="icon" href="/favicon.ico" />
-        <meta property='og:image' content='//assets/portfolio.png'/>
+        <meta property='og:title' content='Joshua Lausberg | Portfolio'/>
+        <meta property='og:image' content='https://joshlausberg.com/assets/portfolio.png'/>
+        <meta property='og:description' content='Discover my projects and abilities...'/>
+        <meta property='og:url' content='https://joshlausberg.com/'/>
       </Head>
 
       <Hero />
