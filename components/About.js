@@ -65,32 +65,44 @@ function Personal() {
 
 function TechStack() {
     return (
-        <div className="about_card flex flex-col md:flex-row w-full md:w-11/12 xl:w-6/12 h-max m-auto p-8 rounded-xl shadow bg-gray-200">
-            <div className="w-full md:w-4/12 mb-8 md:mb-0 text-center">
-                <RiLayoutMasonryLine className="text-8xl m-auto text-green-600" />
-                <h1 className="mb-8 text-center text-4xl font-bold">Frontend</h1>
-                <p className="text-2xl"><FaHtml5 className="inline-block text-yellow-800" /> HTML</p>
-                <p className="text-2xl"><FaCss3Alt className="inline-block text-blue-600" /> CSS + Sass</p>
-                <p className="text-2xl"><SiTailwindcss className="inline-block text-blue-300" /> TailwindCSS</p>
-                <p className="text-2xl"><IoLogoJavascript className="inline-block text-yellow-400" /> Javascript</p>
-                <p className="text-2xl"><FaReact className="inline-block text-blue-600" /> React.js</p>
-                <p className="text-2xl"><SiRedux className="inline-block text-purple-500" /> Redux</p>
-                <p className="text-2xl"><SiNextDotJs className="inline-block" /> Next.js</p>
-                <p className="text-xl"><SiTensorflow className="inline-block text-yellow-400" /> TensorFlow.js</p>
+        <div className="about_card w-full md:w-11/12 lg:w-9/12 xl:w-7/12 h-max m-auto p-4 rounded-xl shadow bg-gray-200">
+            <div className="w-full mb-8 flex flex-col md:flex-row text-center">
+                <div className="w-full md:w-64 mr-0 md:mr-4">
+                    <RiLayoutMasonryLine className="text-8xl m-auto text-green-600" />
+                    <h1 className="text-center text-4xl font-bold">Frontend</h1>
+                </div>
+                <div className="w-full flex flex-wrap justify-center md:justify-start items-center">
+                    <p className="w-max m-2 p-1 text-xl rounded shadow bg-gray-100"><FaHtml5 className="inline-block text-yellow-800" /> HTML</p>
+                    <p className="w-max m-2 p-1 text-xl rounded shadow bg-gray-100"><FaCss3Alt className="inline-block text-blue-600" /> CSS + Sass</p>
+                    <p className="w-max m-2 p-1 text-xl rounded shadow bg-gray-100"><SiTailwindcss className="inline-block text-blue-300" /> TailwindCSS</p>
+                    <p className="w-max m-2 p-1 text-xl rounded shadow bg-gray-100"><IoLogoJavascript className="inline-block text-yellow-400" /> Javascript</p>
+                    <p className="w-max m-2 p-1 text-xl rounded shadow bg-gray-100"><FaReact className="inline-block text-blue-600" /> React.js</p>
+                    <p className="w-max m-2 p-1 text-xl rounded shadow bg-gray-100"><SiRedux className="inline-block text-purple-500" /> Redux</p>
+                    <p className="w-max m-2 p-1 text-xl rounded shadow bg-gray-100"><SiNextDotJs className="inline-block" /> Next.js</p>
+                    <p className="w-max m-2 p-1 text-xl rounded shadow bg-gray-100"><SiTensorflow className="inline-block text-yellow-400" /> TensorFlow.js</p>
+                </div>
             </div>
-            <div className="w-full md:w-4/12 mb-8 md:mb-0 text-center">
-                <FaDatabase className="text-8xl m-auto text-blue-600" />
-                <h1 className="mb-8 text-center text-4xl font-bold">Backend</h1>
-                <p className="text-2xl"><FaNodeJs className="inline-block text-green-400" /> Node.js</p>
-                <p className="text-2xl"><DiMongodb className="inline-block text-green-500" /> MongoDB</p>
+            <div className="w-full mb-8 flex flex-col md:flex-row text-center">
+                <div className="w-full md:w-64 mr-0 md:mr-4">
+                    <FaDatabase className="text-8xl m-auto text-blue-600" />
+                    <h1 className="text-center text-4xl font-bold">Backend</h1>
+                </div>
+                <div className="w-full flex flex-wrap justify-center md:justify-start items-center">
+                    <p className="w-max m-2 p-1 text-xl rounded shadow bg-gray-100"><FaNodeJs className="inline-block text-green-400" /> Node.js</p>
+                    <p className="w-max m-2 p-1 text-xl rounded shadow bg-gray-100"><DiMongodb className="inline-block text-green-500" /> MongoDB</p>
+                </div>
             </div>
-            <div className="w-full md:w-4/12 mb-8 md:mb-0 text-center">
-                <FaInfinity className="text-8xl m-auto text-yellow-600" />
-                <h1 className="mb-8 text-center text-4xl font-bold">Dev-ops</h1>
-                <p className="text-2xl"><FaGithub className="inline-block" /> Github</p>
-                <p className="text-2xl"><FaGitAlt className="inline-block text-yellow-600" /> Git</p>
-                <p className="text-2xl"><SiHeroku className="inline-block text-purple-500" /> Heroku</p>
-                <p className="text-2xl"><IoLogoVercel className="inline-block" /> Vercel</p>
+            <div className="w-full flex flex-col md:flex-row text-center">
+                <div className="w-full md:w-64 mr-0 md:mr-4">
+                    <FaInfinity className="text-8xl m-auto text-yellow-600" />
+                    <h1 className="text-center text-4xl font-bold">Dev-ops</h1>
+                </div>
+                <div className="w-full flex flex-wrap justify-center md:justify-start items-center">
+                    <p className="w-max m-2 p-1 text-xl rounded shadow bg-gray-100"><FaGithub className="inline-block" /> Github</p>
+                    <p className="w-max m-2 p-1 text-xl rounded shadow bg-gray-100"><FaGitAlt className="inline-block text-yellow-600" /> Git</p>
+                    <p className="w-max m-2 p-1 text-xl rounded shadow bg-gray-100"><SiHeroku className="inline-block text-purple-500" /> Heroku</p>
+                    <p className="w-max m-2 p-1 text-xl rounded shadow bg-gray-100"><IoLogoVercel className="inline-block" /> Vercel</p>
+                </div>
             </div>
         </div>
     )
