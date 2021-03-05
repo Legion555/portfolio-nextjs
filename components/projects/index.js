@@ -1,0 +1,138 @@
+//icons
+import {AiOutlineLink, AiFillGoogleCircle} from 'react-icons/ai'
+import { DiMongodb } from 'react-icons/di'
+import { FaNodeJs, FaGithub, FaDatabase, FaInfinity } from 'react-icons/fa'
+import { IoLogoVercel } from 'react-icons/io5'
+import { SiTailwindcss, SiNextDotJs, SiRedux, SiTensorflow } from 'react-icons/si'
+import { RiLayoutMasonryLine } from 'react-icons/ri'
+import { VscGraph } from 'react-icons/vsc'
+//images
+import Image from 'next/image'
+
+export default function Work() {
+    return (
+        <div className="py-8" id="work">
+            <div className="w-max m-auto px-4 text-4xl">
+                <h1>Projects</h1>
+                <div className="w-full h-0.5 bg-yellow-600" />
+            </div>
+            <div className="w-full mt-8 flex flex-col items-center">
+                {/* Project Card */}
+                <div className="w-full md:w-9/12 mb-16 p-8 rounded shadow-2xl text-gray-600">
+                    {/* Info + images */}
+                    <div className="flex flex-col lg:flex-row items-center">
+                        <div className="w-full lg:flex-6/12 mr-8">
+                            <h1 className="mb-8 text-3xl text-gray-600">Blog Portfolio with CMS</h1>
+                            <h1 className="mb-4 text-xl underline text-gray-600">Synopsis</h1>
+                            <p className="mb-8 text-justify text-gray-600">The focus of this project was to create a portfolio website with a customized content management system.
+                                The owner of the website can log into the admin dashboard and edit blog posts or albums.<br/><br/>
+                                This way, the owner has the benefit of a CMS without requiring any technical knowledge.<br/><br/>
+                                Simplicity was the goal for this project.</p>
+                            <a href="https://github.com/Legion555/nextjs-sandbox-client" target="_blank"><button className="mr-4 p-2 rounded-xl text-gray-200 bg-yellow-600 hover:text-gray-600 hover:bg-yellow-400"
+                                style={{transition: '1s cubic-bezier(0.075, 0.80, 0.165, 1)'}}>Source code</button></a>
+                            <a href="https://nextjs-sandbox-client.vercel.app" target="_blank"><button className="p-2 rounded-xl text-gray-200 bg-blue-600 hover:text-gray-600 hover:bg-blue-400"
+                                style={{transition: '1s cubic-bezier(0.075, 0.80, 0.165, 1)'}}><AiOutlineLink className="inline text-xl" /> Live app</button></a>
+                        </div>
+                        <div className="w-full lg:flex-6/12 mt-8 lg:mt-0 rounded-xl shadow">
+                            <Image className="object-cover rounded" src="/assets/project_cms.png" alt="project image" width={1280} height={720} />
+                        </div>
+                    </div>
+                    <h1 className="my-8 text-center text-4xl">Technologies</h1>
+                    <div className="w-full flex flex-col lg:flex-row justify-evenly">
+                        <div className="mb-6 lg:mb-0">
+                            <RiLayoutMasonryLine className="text-8xl m-auto text-green-600" />
+                            <h1 className="text-center text-2xl font-bold">Frontend</h1>
+                            <p className="text-xl"><SiNextDotJs className="inline-block" /> Next.js</p>
+                            <p className="text-xl"><SiRedux className="inline-block text-purple-500" /> Redux</p>
+                            <p className="text-xl"><SiTailwindcss className="inline-block text-blue-300" /> TailwindCSS</p>
+                        </div>
+                        <div className="mb-6 lg:mb-0">
+                            <FaDatabase className="text-8xl m-auto text-blue-600" />
+                            <h1 className="text-center text-2xl font-bold">Backend</h1>
+                            <p className="text-xl"><FaNodeJs className="inline-block text-green-400" /> Node.js</p>
+                            <p className="text-xl"><DiMongodb className="inline-block text-green-500" /> MongoDB</p>
+                        </div>
+                        <div>
+                            <FaInfinity className="text-8xl m-auto text-yellow-600" />
+                            <h1 className="text-center text-2xl font-bold">Dev-ops</h1>
+                            <p className="text-xl"><FaGithub className="inline-block" /> Github (version control)</p>
+                            <p className="text-xl"><IoLogoVercel className="inline-block" /> Vercel (client)</p>
+                            <p className="text-xl"><AiFillGoogleCircle className="inline-block text-blue-400" /> Google App Engine (server)</p>
+                        </div>
+                    </div>
+                </div>
+                {/* Project Card */}
+                <div className="w-full md:w-9/12 mb-16 p-8 rounded shadow-2xl text-gray-600">
+                    {/* Info + images */}
+                    <div className="flex flex-col lg:flex-row items-center">
+                        <div className="w-full lg:flex-6/12 mr-8">
+                            <h1 className="mb-8 text-3xl text-gray-600">Speech Recognition Quiz</h1>
+                            <h1 className="mb-4 text-xl underline text-gray-600">Synopsis</h1>
+                            <p className="mb-8 text-justify text-gray-600">I implemented TensorFlow's Speech Recognition model to create a web quiz capable of running off of speech.<br/><br/>
+                                The purpose was to enhance my understanding of machine learning models, while creating something enjoyable and innovative.</p>
+                            <a href="https://github.com/Legion555/tensorflow-speech-recognizer" target="_blank"><button className="mr-4 p-2 rounded-xl text-gray-200 bg-yellow-600 hover:text-gray-600 hover:bg-yellow-400"
+                                style={{transition: '1s cubic-bezier(0.075, 0.80, 0.165, 1)'}}>Source code</button></a>
+                            <a href="https://tensorflow-speech-recognizer.vercel.app/" target="_blank"><button className="p-2 rounded-xl text-gray-200 bg-blue-600 hover:text-gray-600 hover:bg-blue-400"
+                                style={{transition: '1s cubic-bezier(0.075, 0.80, 0.165, 1)'}}><AiOutlineLink className="inline text-xl" /> Live app</button></a>
+                        </div>
+                        <div className="w-full lg:flex-6/12 mt-8 lg:mt-0 rounded-xl shadow">
+                            <Image className="object-cover rounded" src="/assets/speech_recognizer.png" alt="project image" width={1280} height={720} />
+                        </div>
+                    </div>
+                    <h1 className="my-8 text-center text-4xl">Technologies</h1>
+                    <div className="w-full flex flex-col lg:flex-row justify-evenly">
+                        <div className="mb-6 lg:mb-0">
+                            <RiLayoutMasonryLine className="text-8xl m-auto text-green-600" />
+                            <h1 className="text-center text-2xl font-bold">Frontend</h1>
+                            <p className="text-xl"><SiNextDotJs className="inline-block" /> Next.js</p>
+                            <p className="text-xl"><SiTailwindcss className="inline-block text-blue-300" /> TailwindCSS</p>
+                            <p className="text-xl"><SiTensorflow className="inline-block text-yellow-400" /> TensorFlow.js</p>
+                        </div>
+                        <div>
+                            <FaInfinity className="text-8xl m-auto text-yellow-600" />
+                            <h1 className="text-center text-2xl font-bold">Dev-ops</h1>
+                            <p className="text-xl"><FaGithub className="inline-block" /> Github (version control)</p>
+                            <p className="text-xl"><IoLogoVercel className="inline-block" /> Vercel (client)</p>
+                        </div>
+                    </div>
+                </div>
+                {/* Project Card */}
+                <div className="w-full md:w-9/12 p-8 rounded shadow-2xl text-gray-600">
+                    {/* Info + images */}
+                    <div className="flex flex-col lg:flex-row items-center">
+                        <div className="w-full lg:flex-6/12 mr-8">
+                            <h1 className="mb-8 text-3xl text-gray-600">Simple Cryptocurrency Analytics Platform</h1>
+                            <h1 className="mb-4 text-xl underline text-gray-600">Synopsis</h1>
+                            <p className="mb-8 text-justify text-gray-600">This is a basic implementation of the CoinGecko API with the purpose of displaying trending cryptocurrency data.<br/><br/>
+                                The purpose was to implement data visualization using React-vis.</p>
+                            <a href="https://github.com/Legion555/crypto-analytics" target="_blank"><button className="mr-4 p-2 rounded-xl text-gray-200 bg-yellow-600 hover:text-gray-600 hover:bg-yellow-400"
+                                style={{transition: '1s cubic-bezier(0.075, 0.80, 0.165, 1)'}}>Source code</button></a>
+                            <a href="https://crypto-analytics-legion555.vercel.app/" target="_blank"><button className="p-2 rounded-xl text-gray-200 bg-blue-600 hover:text-gray-600 hover:bg-blue-400"
+                                style={{transition: '1s cubic-bezier(0.075, 0.80, 0.165, 1)'}}><AiOutlineLink className="inline text-xl" /> Live app</button></a>
+                        </div>
+                        <div className="w-full lg:flex-6/12 mt-8 lg:mt-0 rounded-xl shadow">
+                            <Image className="object-cover rounded" src="/assets/crypto_analytics.png" alt="project image" width={1280} height={720} />
+                        </div>
+                    </div>
+                    <h1 className="my-8 text-center text-4xl">Technologies</h1>
+                    <div className="w-full flex flex-col lg:flex-row justify-evenly">
+                        <div className="mb-6 lg:mb-0">
+                            <RiLayoutMasonryLine className="text-8xl m-auto text-green-600" />
+                            <h1 className="text-center text-2xl font-bold">Frontend</h1>
+                            <p className="text-xl"><SiNextDotJs className="inline-block" /> Next.js</p>
+                            <p className="text-xl"><SiRedux className="inline-block text-purple-500" /> Redux</p>
+                            <p className="text-xl"><SiTailwindcss className="inline-block text-blue-300" /> TailwindCSS</p>
+                            <p className="text-xl"><VscGraph className="inline-block text-blue-300" /> React-vis</p>
+                        </div>
+                        <div>
+                            <FaInfinity className="text-8xl m-auto text-yellow-600" />
+                            <h1 className="text-center text-2xl font-bold">Dev-ops</h1>
+                            <p className="text-xl"><FaGithub className="inline-block" /> Github (version control)</p>
+                            <p className="text-xl"><IoLogoVercel className="inline-block" /> Vercel (client)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    )
+}
