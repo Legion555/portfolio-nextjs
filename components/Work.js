@@ -19,9 +19,10 @@ export default function Work() {
 
     return (
         <div className="py-8" id="work">
-            <div className="w-max m-auto px-4 text-4xl">
-                <h1>Projects</h1>
-                <div className="w-full h-0.5 bg-yellow-600" />
+            <div className="text-center text-6xl font-bold">
+                <div className="w-64 h-8 mx-auto bg-blue-400 relative top-16 z-0"></div>
+                <h1 className="relative z-1">Projects</h1>
+                <p></p>
             </div>
             <div className="w-full mt-8 flex flex-col md:flex-row justify-evenly items-center flex-wrap">
                 <ProjectCard imageName={'project_cms'} name={'Portfolio/Blog with custom CMS'}

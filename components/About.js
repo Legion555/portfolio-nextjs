@@ -10,11 +10,11 @@ import { SiTailwindcss, SiNextDotJs, SiHeroku, SiRedux, SiTensorflow } from 'rea
 
 
 export default function About() {
-    const [view, setView] = useState('techstack')
+    const [view, setView] = useState('')
 
     return (
-        <div className="about w-full min-h-screen py-16 bg-black" id="about">
-            <div className="w-max m-auto mb-8 flex justify-center">
+        <div className="about w-full py-8 bg-gray-100" id="about">
+            {/* <div className="w-max m-auto mb-8 flex justify-center">
                 <div className="w-30 md:w-40 flex flex-col items-center" onClick={() => setView('personal')}>
                     <div className={view === 'personal' ? "w-20 h-20 mb-4 bg-yellow-400" : "w-12 h-12 mb-4 hover:w-20 hover:h-20 hover:bg-yellow-400"}
                         style={{border: '2px solid white' , borderRadius: '50%', transition: '1.5s cubic-bezier(0.075, 0.82, 0.165, 1)'}} />
@@ -32,7 +32,56 @@ export default function About() {
                     <p className="text-xl md:text-2xl text-gray-200">My resume</p>
                 </div>
                 </a>
+            </div> */}
+            <div className="mb-8 text-center font-bold">
+                <div className="w-72 h-8 mx-auto bg-yellow-400 relative top-16 z-0"></div>
+                <h1 className="text-6xl relative z-1">About me</h1>
+                <p className="w-6/12 mt-4 mx-auto text-xl">I am a rationalist with a love for technology, people, and adventure.
+                    I see myself as a piece of clay, capable of adapting to any environment.
+                    I believe that adaptation is one of the defining features of humanity.</p>
             </div>
+
+            <div className="about_card w-full md:w-11/12 lg:w-9/12 xl:w-7/12 h-max m-auto p-4">
+                <div className="w-full mb-8 flex flex-col md:flex-row text-center">
+                    <div className="w-full md:w-64 mr-0 md:mr-4">
+                        <RiLayoutMasonryLine className="text-8xl m-auto text-green-600" />
+                        <h1 className="text-center text-4xl font-bold">Frontend</h1>
+                    </div>
+                    <div className="w-full flex flex-wrap justify-center md:justify-start items-center">
+                        <p className="w-max m-2 p-1 text-xl rounded shadow bg-gray-100"><FaHtml5 className="inline-block text-yellow-800" /> HTML</p>
+                        <p className="w-max m-2 p-1 text-xl rounded shadow bg-gray-100"><FaCss3Alt className="inline-block text-blue-600" /> CSS + Sass</p>
+                        <p className="w-max m-2 p-1 text-xl rounded shadow bg-gray-100"><SiTailwindcss className="inline-block text-blue-300" /> TailwindCSS</p>
+                        <p className="w-max m-2 p-1 text-xl rounded shadow bg-gray-100"><IoLogoJavascript className="inline-block text-yellow-400" /> Javascript</p>
+                        <p className="w-max m-2 p-1 text-xl rounded shadow bg-gray-100"><FaReact className="inline-block text-blue-600" /> React.js</p>
+                        <p className="w-max m-2 p-1 text-xl rounded shadow bg-gray-100"><SiRedux className="inline-block text-purple-500" /> Redux</p>
+                        <p className="w-max m-2 p-1 text-xl rounded shadow bg-gray-100"><SiNextDotJs className="inline-block" /> Next.js</p>
+                        <p className="w-max m-2 p-1 text-xl rounded shadow bg-gray-100"><SiTensorflow className="inline-block text-yellow-400" /> TensorFlow.js</p>
+                    </div>
+                </div>
+                <div className="w-full mb-8 flex flex-col md:flex-row text-center">
+                    <div className="w-full md:w-64 mr-0 md:mr-4">
+                        <FaDatabase className="text-8xl m-auto text-blue-600" />
+                        <h1 className="text-center text-4xl font-bold">Backend</h1>
+                    </div>
+                    <div className="w-full flex flex-wrap justify-center md:justify-start items-center">
+                        <p className="w-max m-2 p-1 text-xl rounded shadow bg-gray-100"><FaNodeJs className="inline-block text-green-400" /> Node.js</p>
+                        <p className="w-max m-2 p-1 text-xl rounded shadow bg-gray-100"><DiMongodb className="inline-block text-green-500" /> MongoDB</p>
+                    </div>
+                </div>
+                <div className="w-full flex flex-col md:flex-row text-center">
+                    <div className="w-full md:w-64 mr-0 md:mr-4">
+                        <FaInfinity className="text-8xl m-auto text-yellow-600" />
+                        <h1 className="text-center text-4xl font-bold">Dev-ops</h1>
+                    </div>
+                    <div className="w-full flex flex-wrap justify-center md:justify-start items-center">
+                        <p className="w-max m-2 p-1 text-xl rounded shadow bg-gray-100"><FaGithub className="inline-block" /> Github</p>
+                        <p className="w-max m-2 p-1 text-xl rounded shadow bg-gray-100"><FaGitAlt className="inline-block text-yellow-600" /> Git</p>
+                        <p className="w-max m-2 p-1 text-xl rounded shadow bg-gray-100"><SiHeroku className="inline-block text-purple-500" /> Heroku</p>
+                        <p className="w-max m-2 p-1 text-xl rounded shadow bg-gray-100"><IoLogoVercel className="inline-block" /> Vercel</p>
+                    </div>
+                </div>
+            </div>
+            
             
             {view === 'personal' &&
                 <Personal />
