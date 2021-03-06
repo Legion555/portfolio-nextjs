@@ -43,11 +43,14 @@ export default function About({darkMode}) {
 
             <div className="about_card w-full md:w-11/12 lg:w-9/12 xl:w-7/12 h-max m-auto p-4">
                 <div className="w-full mb-8 flex flex-col md:flex-row text-center">
-                    <div className="w-full md:w-64 mr-0 md:mr-4">
-                        <RiLayoutMasonryLine className="text-8xl m-auto text-green-600" />
-                        <h1 className="text-center text-4xl font-bold">Frontend</h1>
+                    <div className="w-full md:w-64 h-max mr-0 md:mr-4">
+                        <div className="relative pb-2 text-gray-100 z-10">
+                            <RiLayoutMasonryLine className="text-8xl m-auto" />
+                            <h1 className="text-center text-4xl font-bold">Frontend</h1>
+                        </div>
+                        <div className="w-full h-full relative bottom-full p-2 rounded bg-green-600 z-0" />
                     </div>
-                    <div className="w-full flex flex-wrap justify-center md:justify-start items-center">
+                    <div className="w-full flex flex-wrap justify-center md:justify-start items-start">
                         <TechCard iconName={FaHtml5} iconColor={'text-yellow-600'} techName={'HTML'} />
                         <TechCard iconName={FaCss3Alt} iconColor={'text-blue-400'} techName={'CSS + Sass'} />
                         <TechCard iconName={SiTailwindcss} iconColor={'text-blue-200'} techName={'TailwindCSS'} />
@@ -60,20 +63,26 @@ export default function About({darkMode}) {
                 </div>
                 <div className="w-full mb-8 flex flex-col md:flex-row text-center">
                     <div className="w-full md:w-64 mr-0 md:mr-4">
-                        <FaDatabase className="text-8xl m-auto text-blue-600" />
-                        <h1 className="text-center text-4xl font-bold">Backend</h1>
+                        <div className="relative pb-2 text-gray-100 z-10">
+                            <FaDatabase className="text-8xl m-auto" />
+                            <h1 className="text-center text-4xl font-bold">Backend</h1>
+                        </div>
+                        <div className="w-full h-full relative bottom-full p-2 rounded bg-blue-600 z-0" />
                     </div>
-                    <div className="w-full flex flex-wrap justify-center md:justify-start items-center">
+                    <div className="w-full flex flex-wrap justify-center md:justify-start items-start">
                         <TechCard iconName={FaNodeJs} iconColor={'text-green-400'} techName={'Node.js'} />
                         <TechCard iconName={DiMongodb} iconColor={'text-green-600'} techName={'MongoDB'} />
                     </div>
                 </div>
                 <div className="w-full flex flex-col md:flex-row text-center">
                     <div className="w-full md:w-64 mr-0 md:mr-4">
-                        <FaInfinity className="text-8xl m-auto text-yellow-600" />
-                        <h1 className="text-center text-4xl font-bold">Dev-ops</h1>
+                        <div className="relative pb-2 text-gray-100 z-10">
+                            <FaInfinity className="text-8xl m-auto" />
+                            <h1 className="text-center text-4xl font-bold">Dev-ops</h1>
+                        </div>
+                        <div className="w-full h-full relative bottom-full p-2 rounded bg-yellow-600 z-0" />
                     </div>
-                    <div className="w-full flex flex-wrap justify-center md:justify-start items-center">
+                    <div className="w-full flex flex-wrap justify-center md:justify-start items-start">
                         <TechCard iconName={FaGithub} iconColor={'text-gray-800'} techName={'Github'} />
                         <TechCard iconName={FaGitAlt} iconColor={'text-yellow-600'} techName={'Git'} />
                         <TechCard iconName={SiHeroku} iconColor={'text-purple-600'} techName={'Heroku'} />
