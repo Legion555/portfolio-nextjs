@@ -9,9 +9,9 @@ import { VscGraph } from 'react-icons/vsc'
 //images
 import Image from 'next/image'
 
-export default function Work() {
+export default function Work({darkMode}) {
     return (
-        <div className="w-full md:w-9/12 relative mb-8 mt-8 mx-auto p-8 pt-16 rounded shadow-2xl text-gray-600 bg-gray-100" id='project-details'>
+        <div className={`w-full md:w-9/12 relative mb-8 mt-8 mx-auto p-8 pt-16 rounded shadow-2xl ${darkMode ? 'text-gray-100 bg-gray-800' : 'text-gray-800 bg-gray-100'}`} id='project-details'>
             <div className="flex flex-col lg:flex-row items-center">
                 <div className="w-full lg:flex-6/12 mr-8">
                     <h1 className="mb-8 text-3xl text-gray-600">Speech Recognition Quiz</h1>
