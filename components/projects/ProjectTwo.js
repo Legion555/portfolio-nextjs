@@ -22,8 +22,10 @@ export default function Work({darkMode}) {
                     <a href="https://crypto-analytics-legion555.vercel.app/" target="_blank"><button className="p-2 rounded-xl text-gray-200 bg-blue-600 hover:text-gray-600 hover:bg-blue-400"
                         style={{transition: '1s cubic-bezier(0.075, 0.80, 0.165, 1)'}}><AiOutlineLink className="inline text-xl" /> Live app</button></a>
                 </div>
-                <div className="w-full lg:flex-6/12 mt-8 lg:mt-0 rounded-xl shadow">
-                    <Image className="object-cover rounded" src="/assets/crypto_analytics.png" alt="project image" width={1280} height={720} />
+                <div className="w-full lg:flex-6/12 mt-8 lg:mt-0 relative rounded-xl shadow">
+                    <div className="w-full h-full absolute top-0 left-0 rounded bg-yellow-600" style={{transform: 'rotate(3deg)'}} />
+                    <div className="w-full h-full absolute top-0 left-0 rounded bg-blue-600" style={{transform: 'rotate(-3deg)'}} />
+                    <Image className="object-cover rounded shadow" src="/assets/crypto_analytics.png" alt="project image" width={1280} height={720} />
                 </div>
             </div>
             <h1 className="my-8 text-center text-4xl">Technologies</h1>

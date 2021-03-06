@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 //components
 import Nav from '../components/Nav'
 import Hero from '../components/Hero'
@@ -12,6 +12,17 @@ import Footer from '../components/Footer'
 
 export default function Home() {
   const [darkMode, setDarkMode] = useState(false);
+
+  useEffect(() => {
+    let tempDarkMode = localStorage.getItem('darkmode');
+    if(tempDarkMode) {
+      if(tempDarkMode === "dark") {
+        setDarkMode(true)
+      } else {
+        setDarkMode(false)
+      }
+    }
+  })
 
   return (
     <div className="app w-full">

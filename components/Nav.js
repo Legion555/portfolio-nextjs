@@ -40,10 +40,10 @@ export default function Nav({darkMode, setDarkMode}) {
             <div>
                 {darkMode ?
                     <button className="rounded-full mr-4 p-1 text-2xl md:text-4xl text-gray-100 focus:outline-none" style={{border: '1px solid white'}}
-                        onClick={() => setDarkMode(false)}><BsMoon /></button>
+                        onClick={() => {setDarkMode(false); localStorage.setItem('darkmode', 'light')}}><BsMoon /></button>
                 :
                     <button className="rounded-full mr-4 p-1 text-2xl md:text-4xl text-yellow-400 focus:outline-none" style={{border: '1px solid orange'}}
-                        onClick={() => setDarkMode(true)}><BsSun /></button>
+                        onClick={() => {setDarkMode(true); localStorage.setItem('darkmode', 'dark')}}><BsSun /></button>
                 }
             </div>
         </div>
