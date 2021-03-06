@@ -8,14 +8,14 @@ import { VscGraph } from 'react-icons/vsc'
 //images
 import Image from 'next/image'
 
-export default function Work() {
+export default function Work({darkMode}) {
     return (
         <div className={`w-full md:w-9/12 relative mb-8 mt-8 mx-auto p-8 pt-16 rounded shadow-2xl ${darkMode ? 'text-gray-100 bg-gray-800' : 'text-gray-800 bg-gray-100'}`} id='project-details'>
             <div className="flex flex-col lg:flex-row items-center">
                 <div className="w-full lg:flex-6/12 mr-8">
-                    <h1 className="mb-8 text-3xl text-gray-600">Simple Cryptocurrency Analytics Platform</h1>
-                    <h1 className="mb-4 text-xl underline text-gray-600">Synopsis</h1>
-                    <p className="mb-8 text-justify text-gray-600">This is a basic implementation of the CoinGecko API with the purpose of displaying trending cryptocurrency data.<br/><br/>
+                    <h1 className="mb-8 text-3xl">Simple Cryptocurrency Analytics Platform</h1>
+                    <h1 className="mb-4 text-xl underline">Synopsis</h1>
+                    <p className="mb-8 text-justify">This is a basic implementation of the CoinGecko API with the purpose of displaying trending cryptocurrency data.<br/><br/>
                         The purpose was to implement data visualization using React-vis.</p>
                     <a href="https://github.com/Legion555/crypto-analytics" target="_blank"><button className="mr-4 p-2 rounded-xl text-gray-200 bg-yellow-600 hover:text-gray-600 hover:bg-yellow-400"
                         style={{transition: '1s cubic-bezier(0.075, 0.80, 0.165, 1)'}}>Source code</button></a>
