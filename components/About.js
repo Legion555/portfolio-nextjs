@@ -89,6 +89,12 @@ export default function About({darkMode}) {
                         <TechCard iconName={IoLogoVercel} iconColor={'text-gray-800'} techName={'Vercel'} />
                     </div>
                 </div>
+                <a href="https://1drv.ms/b/s!AnD_4HQ6Caqsk8ckR_AZjjZ744Y-EQ?e=PZXgc9" target="_blank">
+                <div className="w-max mt-8 p-2 mx-auto rounded-xl hover:bg-gray-100 hover:text-gray-800"
+                    style={{border: '1px solid white', transition: '1s cubic-bezier(0.075, 0.82, 0.165, 1)'}}>
+                    <p className="text-xl md:text-2xl">View resume</p>
+                </div>
+                </a>
             </div>
             
             
