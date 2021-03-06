@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import { useState } from 'react'
 //components
 import Nav from '../components/Nav'
 import Hero from '../components/Hero'
@@ -7,7 +8,11 @@ import Work from '../components/Work'
 import Contact from '../components/Contact'
 import Footer from '../components/Footer'
 
+
+
 export default function Home() {
+  const [darkMode, setDarkMode] = useState(false);
+
   return (
     <div className="app w-full">
       <Head>
@@ -21,11 +26,11 @@ export default function Home() {
 
       <Hero />
 
-      <Nav />
+      <Nav darkMode={darkMode} setDarkMode={setDarkMode} />
 
-      <About />
+      <About darkMode={darkMode} />
 
-      <Work />
+      <Work darkMode={darkMode} />
 
       <Contact />
 

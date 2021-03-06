@@ -10,7 +10,7 @@ import Image from 'next/image'
 
 export default function Work() {
     return (
-        <div className="w-full md:w-9/12 relative mb-8 mt-8 mx-auto p-8 rounded shadow-2xl text-gray-600 bg-gray-100">
+        <div className="w-full md:w-9/12 relative mb-8 mt-8 mx-auto p-8 pt-16 rounded shadow-2xl text-gray-600 bg-gray-100" id='project-details'>
             <div className="flex flex-col lg:flex-row items-center">
                 <div className="w-full lg:flex-6/12 mr-8">
                     <h1 className="mb-8 text-3xl text-gray-600">Simple Cryptocurrency Analytics Platform</h1>

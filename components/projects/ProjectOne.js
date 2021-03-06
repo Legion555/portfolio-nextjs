@@ -8,14 +8,14 @@ import { RiLayoutMasonryLine } from 'react-icons/ri'
 //images
 import Image from 'next/image'
 
-export default function ProjectOne({setProjectModal}) {
+export default function ProjectOne({darkMode}) {
     return (
-        <div className="w-full md:w-9/12 relative mb-8 mt-8 mx-auto p-8 rounded shadow-2xl text-gray-600 bg-gray-100">
+        <div className={`w-full md:w-9/12 relative mb-8 mt-8 mx-auto p-8 pt-16 rounded shadow-2xl ${darkMode ? 'text-gray-100 bg-gray-800' : 'text-gray-800 bg-gray-100'}`} id='project-details'>
             <div className="flex flex-col lg:flex-row items-center">
                 <div className="w-full lg:flex-6/12 mr-8">
-                    <h1 className="mb-8 text-3xl text-gray-600">Blog Portfolio with CMS</h1>
-                    <h1 className="mb-4 text-xl underline text-gray-600">Synopsis</h1>
-                    <p className="mb-8 text-justify text-gray-600">The focus of this project was to create a portfolio website with a customized content management system.
+                    <h1 className="mb-8 text-3xl">Blog Portfolio with CMS</h1>
+                    <h1 className="mb-4 text-xl underline">Synopsis</h1>
+                    <p className="mb-8 text-justify">The focus of this project was to create a portfolio website with a customized content management system.
                         The owner of the website can log into the admin dashboard and edit blog posts or albums.<br/><br/>
                         This way, the owner has the benefit of a CMS without requiring any technical knowledge.<br/><br/>
                         Simplicity was the goal for this project.</p>
