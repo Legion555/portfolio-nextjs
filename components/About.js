@@ -1,4 +1,5 @@
-import { useState } from "react"
+//redux
+import {useSelector} from 'react-redux';
 //icons
 import { DiMongodb } from 'react-icons/di'
 import { FaHtml5, FaCss3Alt, FaReact, FaDatabase, FaNodeJs, FaGithub, FaGitAlt, FaInfinity } from 'react-icons/fa'
@@ -9,38 +10,20 @@ import { SiTailwindcss, SiNextDotJs, SiHeroku, SiRedux, SiTensorflow } from 'rea
 
 
 
-export default function About({darkMode}) {
-    const [view, setView] = useState('')
+export default function About() {
+    const darkMode = useSelector(state => state.darkMode);
 
     return (
-        <div className={`about w-full py-8 ${darkMode ? 'text-gray-100 bg-gray-800' : 'text-gray-800 bg-gray-100'}`} id="about">
-            {/* <div className="w-max m-auto mb-8 flex justify-center">
-                <div className="w-30 md:w-40 flex flex-col items-center" onClick={() => setView('personal')}>
-                    <div className={view === 'personal' ? "w-20 h-20 mb-4 bg-yellow-400" : "w-12 h-12 mb-4 hover:w-20 hover:h-20 hover:bg-yellow-400"}
-                        style={{border: '2px solid white' , borderRadius: '50%', transition: '1.5s cubic-bezier(0.075, 0.82, 0.165, 1)'}} />
-                    <p className="text-xl md:text-2xl text-gray-200">Who I am</p>
-                </div>
-                <div className="w-30 md:w-40 flex flex-col items-center" onClick={() => setView('techstack')}>
-                    <div className={view === 'techstack' ? "w-20 h-20 mb-4 bg-yellow-400" : "w-12 h-12 mb-4 hover:w-20 hover:h-20 hover:bg-yellow-400"}
-                        style={{border: '2px solid white' , borderRadius: '50%', transition: '1.5s cubic-bezier(0.075, 0.82, 0.165, 1)'}} />
-                    <p className="text-xl md:text-2xl text-gray-200">My tech stack</p>
-                </div>
-                <a href="https://1drv.ms/b/s!AnD_4HQ6Caqsk8ckR_AZjjZ744Y-EQ?e=HauwOX" target="_blank">
-                <div className="w-30 md:w-40 flex flex-col items-center">
-                    <div className="w-12 h-12 mb-4 hover:w-20 hover:h-20 hover:bg-yellow-400"
-                        style={{border: '2px solid white' , borderRadius: '50%', transition: '1.5s cubic-bezier(0.075, 0.82, 0.165, 1)'}} />
-                    <p className="text-xl md:text-2xl text-gray-200">My resume</p>
-                </div>
-                </a>
-            </div> */}
+        <div className={`about w-full py-8 transition ease-in duration-150 ${darkMode ? 'text-gray-100 bg-gray-800' : 'text-gray-800 bg-gray-100'}`} id="about">
             <div className="mb-8 text-center">
-                <div className="w-72 h-8 mx-auto bg-yellow-400 relative top-16 z-0"></div>
-                <h1 className="text-6xl relative z-1">About me</h1>
+                <div className="text-center text-6xl font-bold">
+                    <div className="w-64 h-8 mx-auto bg-green-400 relative top-16 z-0"></div>
+                    <h1 className="relative z-1">Projects</h1>
+                </div>
                 <p className="w-6/12 mt-4 mx-auto text-xl">I am a rationalist with a love for technology, people, and adventure.
                     I see myself as a piece of clay, capable of adapting to any environment.
                     I believe that adaptation is one of the defining features of humanity.</p>
             </div>
-
             <div className="about_card w-full md:w-11/12 lg:w-9/12 xl:w-7/12 h-max m-auto p-4">
                 <div className="w-full mb-8 flex flex-col md:flex-row text-center">
                     <div className="w-full md:w-64 h-max mr-0 md:mr-4">
@@ -90,27 +73,23 @@ export default function About({darkMode}) {
                     </div>
                 </div>
                 <a href="https://1drv.ms/b/s!AnD_4HQ6Caqsk8ckR_AZjjZ744Y-EQ?e=PZXgc9" target="_blank">
-                <div className="w-max mt-8 p-2 mx-auto rounded-xl hover:bg-gray-100 hover:text-gray-800"
-                    style={{border: '1px solid white', transition: '1s cubic-bezier(0.075, 0.82, 0.165, 1)'}}>
+                <div className={`w-max mt-8 p-2 mx-auto rounded-xl border transition ease-in duration-150
+                    ${darkMode ? 'border-white hover:bg-gray-100 hover:text-gray-800' : 'border-black hover:bg-gray-800 hover:text-gray-100' }`} >
                     <p className="text-xl md:text-2xl">View resume</p>
                 </div>
                 </a>
             </div>
-            
-            
-            {view === 'personal' &&
-                <Personal />
-            }
-            {view === 'techstack' &&
-                <TechStack />
-            }
         </div>
     )
 }
 
 function TechCard({iconName, iconColor, techName}) {
+    const darkMode = useSelector(state => state.darkMode);
     const Icon = iconName;
+
     return (
-        <p className="w-max m-2 p-1 text-xl rounded shadow text-gray-800 bg-gray-100"><Icon className={`inline-block ${iconColor}`} /> {techName}</p>
+        <p className={`w-max m-2 px-2 py-1 text-xl rounded shadow ${darkMode ? 'text-gray-100 bg-gray-600' : 'text-gray-800 bg-gray-200' }`}>
+            <Icon className={`inline-block ${iconColor}`} /> {techName}
+        </p>
     )
 }

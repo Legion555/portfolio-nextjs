@@ -1,9 +1,27 @@
+import {useEffect} from 'react';
 import {Link} from 'react-scroll';
 import {BsSun, BsMoon} from 'react-icons/bs'
+//redux
+import {useDispatch, useSelector} from 'react-redux';
+import {updateDarkMode} from '../actions';
 
-export default function Nav({darkMode, setDarkMode}) {
+export default function Nav() {
+    const dispatch = useDispatch();
+    const darkMode = useSelector(state => state.darkMode);
+
+    useEffect(() => {
+        let tempDarkMode = localStorage.getItem('darkmode');
+        if(tempDarkMode) {
+          if(tempDarkMode === "dark") {
+            dispatch(updateDarkMode(true));
+          } else {
+            dispatch(updateDarkMode(false));
+          }
+        }
+    }, [])
+
     return (
-        <div className={`sticky top-0 w-full h-max flex justify-between items-center ${darkMode ? 'text-gray-100 bg-black' : 'text-gray-800 bg-white' } z-50`}>
+        <div className={`sticky top-0 w-full h-max flex justify-between items-center transition ease-in duration-150 ${darkMode ? 'text-gray-100 bg-black' : 'text-gray-800 bg-white' } z-50`}>
             <div/>
             <div className="py-4">
                 <Link
@@ -40,10 +58,10 @@ export default function Nav({darkMode, setDarkMode}) {
             <div>
                 {darkMode ?
                     <button className="rounded-full mr-4 p-1 text-2xl md:text-4xl text-gray-100 focus:outline-none" style={{border: '1px solid white'}}
-                        onClick={() => {setDarkMode(false); localStorage.setItem('darkmode', 'light')}}><BsMoon /></button>
+                        onClick={() => {dispatch(updateDarkMode(false)); localStorage.setItem('darkmode', 'light')}}><BsMoon /></button>
                 :
                     <button className="rounded-full mr-4 p-1 text-2xl md:text-4xl text-yellow-400 focus:outline-none" style={{border: '1px solid orange'}}
-                        onClick={() => {setDarkMode(true); localStorage.setItem('darkmode', 'dark')}}><BsSun /></button>
+                        onClick={() => {dispatch(updateDarkMode(true)); localStorage.setItem('darkmode', 'dark')}}><BsSun /></button>
                 }
             </div>
         </div>
