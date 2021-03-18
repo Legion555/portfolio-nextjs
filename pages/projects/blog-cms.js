@@ -34,7 +34,11 @@ export default function Project1() {
                 {name: 'Google App Engine',icon: <AiFillGoogleCircle className={`inline-block text-blue-400`} />}]
             }
             images={
-                [{imageSource: '/assets/project_cms.png'}]
+                [{imageSource: '/assets/project_cms_1.png'},
+                {imageSource: '/assets/project_cms_2.png'},
+                {imageSource: '/assets/project_cms_3.png'},
+                {imageSource: '/assets/project_cms_4.png'},
+                {imageSource: '/assets/project_cms_5.png'}]
             } />
     )
 }
