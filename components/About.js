@@ -17,10 +17,10 @@ export default function About() {
         <div className={`about w-full py-8 transition ease-in duration-150 ${darkMode ? 'text-gray-100 bg-gray-800' : 'text-gray-800 bg-gray-100'}`} id="about">
             <div className="mb-8 text-center">
                 <div className="text-center text-6xl font-bold">
-                    <div className="w-64 h-8 mx-auto bg-green-400 relative top-16 z-0"></div>
-                    <h1 className="relative z-1">Projects</h1>
+                    <div className="w-56 h-8 mx-auto bg-green-400 relative top-16 z-0"></div>
+                    <h1 className="relative z-1">About</h1>
                 </div>
-                <p className="w-6/12 mt-4 mx-auto text-xl">I am a rationalist with a love for technology, people, and adventure.
+                <p className="w-11/12 md:w-9/12 lg:6/12 mt-4 mx-auto text-xl">I am a rationalist with a love for technology, people, and adventure.
                     I see myself as a piece of clay, capable of adapting to any environment.
                     I believe that adaptation is one of the defining features of humanity.</p>
             </div>

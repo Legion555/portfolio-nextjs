@@ -72,7 +72,7 @@ export default function Template(props) {
                                 </div>
                                 <div className="flex  flex-wrap">
                                     {props.frontendTech.map(tech => 
-                                        <TechCard techName={tech.name} icon={tech.icon} />
+                                        <TechCard key={tech.name} techName={tech.name} icon={tech.icon} />
                                     )}
                                 </div>
                             </div>
@@ -84,7 +84,7 @@ export default function Template(props) {
                                     </div>
                                     <div className="flex flex-wrap">
                                         {props.backendTech.map(tech => 
-                                            <TechCard techName={tech.name} icon={tech.icon} />
+                                            <TechCard key={tech.name} techName={tech.name} icon={tech.icon} />
                                         )}
                                     </div>
                                 </div>
@@ -96,7 +96,7 @@ export default function Template(props) {
                                 </div>
                                 <div className="flex flex-wrap">
                                 {props.devopsTech.map(tech => 
-                                        <TechCard techName={tech.name} icon={tech.icon} />
+                                        <TechCard key={tech.name} techName={tech.name} icon={tech.icon} />
                                     )}
                                 </div>
                             </div>
