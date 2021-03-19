@@ -15,12 +15,17 @@ export default function Work() {
                 <h1 className="relative z-1">Projects</h1>
             </div>
             <div className="w-full mt-8 flex flex-col md:flex-row justify-evenly items-center flex-wrap">
+
+                <ProjectCard imageName={'coding_victories_1'} name={'Coding Victories'}
+                    overlayColor={'bg-blue-600'} detailsLink={'coding-victories'}
+                    githubLink={'https://github.com/Legion555/coding-victories'} appLink={'https://nextjs-sandbox-client.vercel.app'} />
+
                 <ProjectCard imageName={'project_cms_1'} name={'Portfolio/Blog with custom CMS'}
-                    projectId={'ProjectOne'} overlayColor={'bg-blue-600'} detailsLink={'blog-cms'}
+                    overlayColor={'bg-yellow-600'} detailsLink={'blog-cms'}
                     githubLink={'https://github.com/Legion555/nextjs-sandbox-client'} appLink={'https://nextjs-sandbox-client.vercel.app'} />
 
                 <ProjectCard imageName={'crypto_analytics'} name={'Crytocurrency Analytics Platform'}
-                    projectId={'ProjectTwo'} overlayColor={'bg-yellow-600'} detailsLink={'crypto-analytics'}
+                    overlayColor={'bg-yellow-600'} detailsLink={'crypto-analytics'}
                     githubLink={'https://github.com/Legion555/crypto-analytics'} appLink={'https://crypto-analytics-legion555.vercel.app'} />
 
                 <ProjectCard imageName={'speech_recognizer'} name={'Speech recognition quiz'}

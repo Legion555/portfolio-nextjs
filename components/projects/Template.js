@@ -121,11 +121,11 @@ function TechCard({icon, techName}) {
 
 const Gallery = ({galleryExpansion, setGalleryExpansion, images}) => {
     return (
-        <div className={`py-8 rounded-xl shadow bg-gray-800 overflow-hidden
-            transition-all ease-in duration-300 ${galleryExpansion ? 'w-full h-full' : 'w-full lg:w-1/3 xl:w-1/2 h-56 xl:h-80'}`}>
+        <div className={`py-4 lg:py-8 rounded-xl shadow bg-gray-800 overflow-hidden order-first lg:order-none
+            transition-all ease-in duration-300 ${galleryExpansion ? 'w-full h-full' : 'w-full lg:w-1/3 xl:w-1/2 lg:h-56 xl:h-80'}`}>
             {!galleryExpansion ?
                 <div className="h-full flex justify-center items-center cursor-pointer" onClick={() => setGalleryExpansion(true)}>
-                    <h1 className="text-4xl text-gray-200">View Gallery</h1>
+                    <h1 className="text-2xl md:text-4xl text-gray-200">View Gallery</h1>
                 </div>
                 :
                 <div className="h-full">
