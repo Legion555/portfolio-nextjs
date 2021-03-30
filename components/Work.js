@@ -20,9 +20,9 @@ export default function Work() {
                     overlayColor={'bg-blue-600'} detailsLink={'coding-victories'}
                     githubLink={'https://github.com/Legion555/coding-victories'} appLink={'https://nextjs-sandbox-client.vercel.app'} />
 
-                <ProjectCard imageName={'project_cms_1'} name={'Portfolio/Blog with custom CMS'}
-                    overlayColor={'bg-yellow-600'} detailsLink={'blog-cms'}
-                    githubLink={'https://github.com/Legion555/nextjs-sandbox-client'} appLink={'https://nextjs-sandbox-client.vercel.app'} />
+                <ProjectCard imageName={'tempus_1'} name={'Tempus'}
+                    overlayColor={'bg-yellow-600'} detailsLink={'tempus'}
+                    githubLink={'https://github.com/Legion555/ecommerce-tempus'} appLink={'https://tempus-eight.vercel.app'} />
 
                 <ProjectCard imageName={'crypto_analytics'} name={'Crytocurrency Analytics Platform'}
                     overlayColor={'bg-yellow-600'} detailsLink={'crypto-analytics'}

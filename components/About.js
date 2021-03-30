@@ -72,7 +72,7 @@ export default function About() {
                         <TechCard iconName={IoLogoVercel} iconColor={'text-gray-800'} techName={'Vercel'} />
                     </div>
                 </div>
-                <a href="https://1drv.ms/b/s!AnD_4HQ6Caqsk8ckR_AZjjZ744Y-EQ?e=PZXgc9" target="_blank">
+                <a href="https://1drv.ms/b/s!AnD_4HQ6Caqsk8ckR_AZjjZ744Y-EQ?e=PZXgc9" target="_blank" >
                 <div className={`w-max mt-8 p-2 mx-auto rounded-xl border transition ease-in duration-150
                     ${darkMode ? 'border-white hover:bg-gray-100 hover:text-gray-800' : 'border-black hover:bg-gray-800 hover:text-gray-100' }`} >
                     <p className="text-xl md:text-2xl">View resume</p>
