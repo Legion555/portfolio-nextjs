@@ -18,7 +18,7 @@ export default function Work() {
 
                 <ProjectCard imageName={'coding_victories_1'} name={'Coding Victories'}
                     overlayColor={'bg-blue-600'} detailsLink={'coding-victories'}
-                    githubLink={'https://github.com/Legion555/coding-victories'} appLink={'https://github.com/Legion555/coding-victories'} />
+                    githubLink={'https://github.com/Legion555/coding-victories'} appLink={'https://coding-victories.vercel.app/main'} />
 
                 <ProjectCard imageName={'tempus_1'} name={'Tempus'}
                     overlayColor={'bg-yellow-600'} detailsLink={'tempus'}
