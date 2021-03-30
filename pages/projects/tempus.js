@@ -16,7 +16,7 @@ export default function Project1() {
             overview={`The focus of this project was to create an ecommerce web app using Next JS API.
             
             In doing so, I managed to create a full stack application hosted entirely on Vercel`}
-            sourceLink={"https://github.com/Legion555/coding-victories"} liveAppLink={"https://nextjs-sandbox-client.vercel.app"}
+            sourceLink={"https://github.com/Legion555/ecommerce-tempus"} liveAppLink={"https://tempus-eight.vercel.app"}
             frontendTech={
                 [{name: 'Next.js',icon: <SiNextDotJs className={`inline-block`} />},
                 {name: 'Redux',icon: <SiRedux className={`inline-block text-purple-500`} />},
