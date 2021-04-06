@@ -2,12 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa&family=Roboto&display=swap');
 
-p, a, h1 {
-  font-family: 'Raleway', sans-serif;
+h1, h2, h3, button, a {
+    font-family: 'Comfortaa', cursive;
 }
-
+p, input {
+    font-family: 'Roboto', sans-serif;
+}
 
 /* Nav */
 .nav-active {
@@ -27,6 +29,11 @@ p, a, h1 {
 @keyframes fadeIn {
   from {right: 100vw}
   to {right: 0}
+}
+
+/* Work */
+.project-card:hover .project-card_overlay {
+  opacity: 1;
 }
 
 /* Contact */
