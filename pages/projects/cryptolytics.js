@@ -12,15 +12,13 @@ export default function Project1() {
     return (
         <Template
             title={'Cryptocurrency Analytics Platform'}
-            overview={`This is a basic implementation of the CoinGecko API with the purpose of displaying trending cryptocurrency data.
-            
-            The purpose was to implement data visualization using React-vis.`}
-            sourceLink={"https://github.com/Legion555/crypto-analytics"} liveAppLink={"https://crypto-analytics-legion555.vercel.app"}
+            overview={`This web app uses the CoinGecko API for the purpose of displaying cryptocurrency data.`}
+            sourceLink={"https://github.com/Legion555/cryptolytics"} liveAppLink={"https://cryptolytics.vercel.app/"}
             frontendTech={
                 [{name: 'Next.js',icon: <SiNextDotJs className={`inline-block`} />},
                 {name: 'Redux',icon: <SiRedux className={`inline-block text-purple-500`} />},
                 {name: 'TailwindCSS',icon: <SiTailwindcss className={`inline-block text-blue-300`} />},
-                {name: 'React-vis',icon: <VscGraph className={`inline-block text-blue-300`} />}]
+                {name: 'ReCharts',icon: <VscGraph className={`inline-block text-blue-300`} />}]
             }
             backendTech={
                 [{name: 'CoinGecko API',icon: <FaBitcoin className={`inline-block`} />}]
@@ -30,7 +28,9 @@ export default function Project1() {
                 {name: 'Vercel',icon: <IoLogoVercel className={`inline-block`} />}]
             }
             images={
-                [{imageSource: '/assets/crypto_analytics.png'}]
+                [{imageSource: '/assets/cryptolytics_1.png'},
+                {imageSource: '/assets/cryptolytics_2.png'},
+                {imageSource: '/assets/cryptolytics_3.png'},]
             } />
     )
 }

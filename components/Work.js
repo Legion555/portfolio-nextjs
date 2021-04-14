@@ -26,11 +26,11 @@ export default function Work() {
                 <ProjectCard imageName={'coding_victories_1'} name={'Coding Victories'} descr={'This project utilizes the NEXT API feature for backend implementation. I connected it with MongoDB as its database.'}
                     detailsLink={'coding-victories'} githubLink={'https://github.com/Legion555/coding-victories'} appLink={'https://coding-victories.vercel.app/main'} />
 
+                <ProjectCard imageName={'cryptolytics_1'} name={'Cryptocurrency Analytics Platform'} descr={'This web app uses the CoinGecko API for the purpose of displaying cryptocurrency data.'}
+                    detailsLink={'cryptolytics'} githubLink={'https://github.com/Legion555/cryptolytics'} appLink={'https://cryptolytics.vercel.app/'} />
+
                 <ProjectCard imageName={'tempus_1'} name={'Tempus'} descr={'The focus of this project was to create an ecommerce web app using Next JS API.'}
                     detailsLink={'tempus'} githubLink={'https://github.com/Legion555/ecommerce-tempus'} appLink={'https://tempus-eight.vercel.app'} />
-
-                <ProjectCard imageName={'crypto_analytics'} name={'Cryptocurrency Analytics Platform'} descr={'This is a basic implementation of the CoinGecko API with the purpose of displaying trending cryptocurrency data.'}
-                    detailsLink={'crypto-analytics'} githubLink={'https://github.com/Legion555/crypto-analytics'} appLink={'https://crypto-analytics-legion555.vercel.app'} />
 
                 <ProjectCard imageName={'speech_recognizer'} name={'Speech recognition quiz'} descr={"I implemented TensorFlow's Speech Recognition model to create a web quiz capable of running off of speech."}
                     detailsLink={'speech-quiz'} githubLink={'https://github.com/Legion555/tensorflow-speech-recognizer'} appLink={'https://tensorflow-speech-recognizer.vercel.app'} />
