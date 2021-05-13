@@ -19,5 +19,7 @@ module.exports = {
       height: ['hover'],
     },
   },
-  plugins: [],
+  plugins: [
+    require('tailwind-scrollbar'),
+  ],
 }
