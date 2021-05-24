@@ -210,7 +210,7 @@ const ProjectCard = ({data, setViewProjectDetails, setSelectedProject}) => {
                 setViewProjectDetails(true);
             }}>
                 <div className="w-img-mobile md:w-img-desktop h-img-mobile md:h-img-desktop relative">
-                    <Image className="object-fit" src={`${data.images[0]}`} alt="project image" layout="fill" />
+                    <Image className="object-fit" src={`${data.images[0]}`} alt="project image" layout="fill" loading="eager" />
                 </div>
                 <div className="project-card_overlay w-full h-full absolute top-0 left-0 flex items-end opacity-0 transition-all ease-in duration 300">
                     <div className="w-full h-full md:h-auto px-2 py-4 bg-gray-800 bg-opacity-85">
