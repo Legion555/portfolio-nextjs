@@ -13,6 +13,7 @@ export default function Contact() {
             e.preventDefault();
 
             setStatus('Sending...')
+            //emailjs.sendForm('service_akf9odd', 'template_4fyahrm', e.target, 'user_OtuZx1LoSqVcMymMnCqR8')
             .then((result) => {
                 setStatus('Successful')
             }, (error) => {
